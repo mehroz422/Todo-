@@ -1,18 +1,16 @@
-<h1>Edit an existing file</h1>
-
-<% if @todo.errors.any?%>
+<% if @user.errors.any?%>
 <h2>The following errors prevented the todo from being saved</h2> 
 <ul>
-     <% @todo.errors.full_messages.each do |msg| %>
+     <% @user.errors.full_messages.each do |msg| %>
      <li> <%= msg %> </li>
      <% end %>
 </ul>
 <% end %>
 
-<%= form_for @todo do |f| %>
+<%= form_for @user do |f| %>
 <p>
    <%= f.label :name %> <br>
-   <%= f.text_field% :name %>
+   <%= f.text_field :name %>
 </p>
 
 <p>
@@ -25,4 +23,4 @@
 
 
 <% end %>
-<%= link_to 'Back to todos listing', todos_path %>
+<%= link_to 'Back to todos listing', users_path %>

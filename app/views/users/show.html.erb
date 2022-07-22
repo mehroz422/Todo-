@@ -1,0 +1,11 @@
+<h1> Showing a Todo </h1>
+
+<p>
+  name: <%= @user.name %>
+</p>
+<p>
+  description: <%= @user.description %>
+  </p>
+  <%= link_to 'Edit this todo', edit_user_path(@user) %>
+  <%= link_to 'Back to todos listing', users_path %>
+  
